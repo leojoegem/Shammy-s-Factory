@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+    color: white; /* Set text color to white */
+    font-family: 'Eater', serif;
+}
+.logo {
+    justify-content: center;
+    display: flex;
+}
+.tab-bar {
+    background-color: #333; /* Set background color */
+  }
+  
+  .tab-bar ul {
+    list-style-type: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox to evenly spread elements */
+    justify-content: space-evenly; /* Spread elements evenly */
+  }
+  
+  .tab-bar li {
+    display: inline; /* Display list items inline */
+  }
+  
+  .tab-bar a {
+    display: block; /* Make anchor elements block-level for styling */
+    padding: 10px 20px; /* Add padding for better visual appearance */
+    text-decoration: none;
+    color: white; /* Set text color */
+  }
+  
+  /* Hover effect */
+  .tab-bar a:hover {
+    background-color: #555; /* Change background color on hover */
+  }
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+/* Style for the image container item (each image with text) */
+.image-container-item {
+    position:relative; /* Establishes positioning context for absolute positioning */
+    width: 49%; /* Set the width to 48% for two images per line with a small gap */
+    height: 400px; /* Set a fixed height for all images */
+    margin-bottom: 5px;
+    border: 1px solid #ccc; /* Add a border for better separation */
+    border-color: black;
+    overflow: hidden; /* Hide overflow to contain absolutely positioned text */
+    background-position:center center;
+    background-size: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Style for the text inside the image container item */
+.image-text {
+    position: absolute;
+    top: 50%; /* Center the text vertically */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    color: white; /* Set text color to white */
+    font-size: 18px; /* Set the font size */
+    opacity: 0; /* Initially hide the text */
+    transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Show the text when hovering over the container */
+.image-container-item:hover {
+    opacity: 1;
+    filter: brightness(0.8); /* Dim the image */
+    transform: scale(1.05); /* Pop-out effect */
+}
