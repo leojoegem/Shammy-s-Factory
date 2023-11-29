@@ -1,14 +1,46 @@
 body {
-    background-color: black;
+    background-color: white;
     color: white; /* Set text color to white */
     font-family: 'Eater', serif;
+    color: black;
 }
 .logo {
     justify-content: center;
     display: flex;
 }
+
+/*login/sign up/cart */
+.logo {
+  position: relative;
+}
+
+.header-buttons {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.login-signup-button,
+.cart-button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-signup-button:hover,
+.cart-button:hover {
+  background-color: #555;
+}
+
 .tab-bar {
-    background-color: #333; /* Set background color */
+    background-color: black;
+    color: black; /* Set background color */
   }
   
   .tab-bar ul {
@@ -20,7 +52,8 @@ body {
   }
   
   .tab-bar li {
-    display: inline; /* Display list items inline */
+    display: inline;
+ /* Display list items inline */
   }
   
   .tab-bar a {
@@ -63,7 +96,7 @@ body {
     transform: translate(-50%, -50%); /* Center the text precisely */
     color: white; /* Set text color to white */
     font-size: 18px; /* Set the font size */
-    opacity: 0; /* Initially hide the text */
+    opacity: 50%; /* Initially hide the text */
     transition: opacity 0.3s ease; /* Add a smooth transition effect */
 }
 
@@ -72,4 +105,94 @@ body {
     opacity: 1;
     filter: brightness(0.8); /* Dim the image */
     transform: scale(1.05); /* Pop-out effect */
+}
+
+ul {
+  list-style: none; /* Remove the bullet points */
+  padding: 0;
+}
+
+ul li img {
+  width: 30px; /* Set the desired width */
+  height: 30px; /* Set the desired height */
+  border-radius: 100%; /* Optional: Adds a circular border */
+}
+
+/* Add styles for the shop items */
+.shop-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.shop-item {
+  width: 30%; /* Adjust the width as needed for three items per row */
+  margin: 20px 0;
+  text-align: center;
+}
+
+.shop-item img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc; /* Add a border for better separation */
+}
+
+.shop-item h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.shop-item p.price {
+  font-weight: bold;
+  color: #4CAF50; /* Green color for price */
+}
+
+.shop-item p.description {
+  margin: 10px 0;
+}
+
+.more-info {
+  background-color: #008CBA; /* Blue color for the button */
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* Styling for the artists intro box... */
+
+/* Existing styles... */
+
+.artist-introduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a; /* Darker background color for elegance */
+  padding: 40px; /* Increased padding for a more spacious feel */
+  margin-top: 40px; /* Increased margin for separation */
+  border-radius: 10px; /* Rounded corners for an elegant touch */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.artist-info {
+  flex: 1;
+  color: #e0e0e0; /* Lighter text color for contrast */
+}
+
+.artist-info h2 {
+  font-size: 2.5em; /* Larger font size for the artist's name */
+}
+
+.artist-info p {
+  line-height: 1.5; /* Increased line height for better readability */
+}
+
+.artist-photo img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for the photo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for the photo */
 }
