@@ -4,11 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Tilt+Neon&display=swap" rel="stylesheet">
     <title>Shop</title>
+    <style>
+.shop-item {
+  font-family: monospace, sans-serif;
+  margin: 1rem;
+  border: 3px solid #776e62;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.more-info {
+  position: relative;
+  padding: 1rem 2rem 0.5rem 2.5rem;
+  color: #000000;
+  border: 3px solid #776e62;
+  -webkit-transition: padding 0.3s ease-in-out;
+  transition: padding 0.3s ease-in-out;
+  font-family: "Protest Revolution", sans-serif;
+  font-size: medium;
+}
+
+.more-info:before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.more-info:hover {
+  padding: 0.75rem 2.25rem;
+}
+
+.more-info:hover:before {
+  top: 0;
+  left: 0;
+}
+.description {
+    color: black;
+    font-family: copperplate, sans-serif;
+}
+
+    </style>
 </head>
 <body>
     <div class="logo">
-        <h1>SHAMMY'S GALLERY.."</h1>
+        <h1>SHAMMY'S FACTORY</h1>
     </div>
     <div class="tab-bar">
         <ul>
@@ -24,53 +79,46 @@
     <div class="shop-section">
         <div class="shop-item">
             <img src="Images/ATTITUDE_OF_JUSTICE/ATTITUDE_OF_JUSTICE.jpeg" alt="Piece 1">
-            <h3>ATTITUDE OF JUSTICE.."</h3>
-            <p class="price">$1000</p>
+            <button class="more-info">ATTITUDE_OF_JUSTICE</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
-            <button class="more-info">More Info</button>
         </div>
 
         <div class="shop-item">
             <img src="Images/ATTITUDE_OF_JUSTICE/CAMO.jpeg" alt="Piece 2">
-            <h3>ATTITUDE OF JUSTICE.."</h3>
-            <p class="price">$1000</p>
+            <button class="more-info">ATTITUDE OF JUSTICE | CAMO</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
-            <button class="more-info">More Info</button>
         </div>
 
         <div class="shop-item">
             <img src="Images/ATTITUDE_OF_JUSTICE/LABOUR.jpeg" alt="Piece 3">
-            <h3>ATTITUDE OF JUSTICE.."</h3>
-            <p class="price">$1000</p>
+            <button class="more-info">ATTITUDE OF JUSTICE | LABOUR</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
-            <button class="more-info">More Info</button>
         </div>
 
         <div class="shop-item">
             <img src="Images/ATTITUDE_OF_JUSTICE/WAR.jpeg" alt="Piece 4">
-            <h3>ATTITUDE OF JUSTICE.."</h3>
-            <p class="price">$1000</p>
+            <button class="more-info">ATTITUDE OF JUSTICE | WAR</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
-            <button class="more-info">More Info</button>
         </div>
 
         <div class="shop-item">
             <img src="Images/TBS/JUXTAPOSED_JEWELZ.jpeg" alt="Piece 5">
-            <h3>JUXTAPOSED_JEWELZ.."</h3>
-            <p class="price">$1000</p>
+            <button class="more-info">JUXTAPOSED_JEWELZ</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
-            <button class="more-info">More Info</button>
         </div>
 
         <div class="shop-item">
-            <img src="Images/TBS/JUXTAPOSED_JEWELZ.jpeg" alt="Piece 6">
-            <h3>CHARCOAL_ON_PAPER.."</h3>
-            <p class="price">$1000</p>
+            <img src="Images/photography/ART5.jpeg" alt="Piece 6">
+            <button class="more-info">WAR</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
-            <button class="more-info">More Info</button>
         </div>
 
         <!-- Repeat the above structure for additional pieces -->
     </div>
+    <script>
+        function transitionToPage(pageURL) {
+            window.location.href = pageURL;
+        }
+    </script>
 </body>
 </html>

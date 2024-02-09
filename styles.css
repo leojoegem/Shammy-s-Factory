@@ -2,16 +2,23 @@ body {
     background-color: white;
     color: white; /* Set text color to white */
     font-family: 'Eater', serif;
-    color: black;
+    color: white;
+}
+h2,h3 {
+  font-family: "Protest Revolution", sans-serif;
 }
 .logo {
     justify-content: center;
     display: flex;
+    color: black;
 }
 
 /*login/sign up/cart */
 .logo {
-  position: relative;
+  position: center;
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header-buttons {
@@ -49,6 +56,7 @@ body {
     padding: 0;
     display: flex; /* Use flexbox to evenly spread elements */
     justify-content: space-evenly; /* Spread elements evenly */
+    font-family: "Protest Revolution", sans-serif;
   }
   
   .tab-bar li {
@@ -150,17 +158,6 @@ ul li img {
 .shop-item p.description {
   margin: 10px 0;
 }
-
-.more-info {
-  background-color: #008CBA; /* Blue color for the button */
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-
-
 /* Styling for the artists intro box... */
 
 /* Existing styles... */
@@ -196,3 +193,9 @@ ul li img {
   border-radius: 10px; /* Rounded corners for the photo */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for the photo */
 }
+.protest-revolution-regular {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
