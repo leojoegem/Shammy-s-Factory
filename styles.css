@@ -193,9 +193,36 @@ ul li img {
   border-radius: 10px; /* Rounded corners for the photo */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for the photo */
 }
+.photoDescription {
+  position: relative;
+}
+
+.photo-one {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for the photo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px; /* Add margin to separate the description */
+}
+
+.photo-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Center text in the middle */
+  color: #fff; /* Set text color to white for better readability */
+}
+
+/* Additional styling for other elements if needed */
 .protest-revolution-regular {
   font-family: "Protest Revolution", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+h2, h3, p {
+  margin-bottom: 10px; /* Adjust the value as needed */
+  margin-right: 100px;
+}

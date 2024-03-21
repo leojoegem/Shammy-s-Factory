@@ -4,11 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="shop.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Tilt+Neon&display=swap" rel="stylesheet">
     <title>Shop</title>
     <style>
+
+.modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color:rgba(0, 0, 0, 0.5);
+        }
+
+.modal-content {
+            background-color: black;
+            margin: 20% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+.close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+.close:hover,
+ .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
 .shop-item {
   font-family: monospace, sans-serif;
   margin: 1rem;
@@ -76,49 +113,53 @@
     </div>
 
     <!-- Shop pieces section -->
-    <div class="shop-section">
+    <section class="shop-section">
         <div class="shop-item">
             <img src="Images/ATTITUDE_OF_JUSTICE/ATTITUDE_OF_JUSTICE.jpeg" alt="Piece 1">
-            <button class="more-info">ATTITUDE_OF_JUSTICE</button>
+            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')">ATTITUDE_OF_JUSTICE</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
         </div>
 
         <div class="shop-item">
             <img src="Images/ATTITUDE_OF_JUSTICE/CAMO.jpeg" alt="Piece 2">
-            <button class="more-info">ATTITUDE OF JUSTICE | CAMO</button>
+            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')">ATTITUDE_OF_JUSTICE | CAMO</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
         </div>
 
         <div class="shop-item">
             <img src="Images/ATTITUDE_OF_JUSTICE/LABOUR.jpeg" alt="Piece 3">
-            <button class="more-info">ATTITUDE OF JUSTICE | LABOUR</button>
+            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')">ATTITUDE OF JUSTICE | LABOUR</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
         </div>
 
         <div class="shop-item">
             <img src="Images/ATTITUDE_OF_JUSTICE/WAR.jpeg" alt="Piece 4">
-            <button class="more-info">ATTITUDE OF JUSTICE | WAR</button>
+            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')">ATTITUDE OF JUSTICE | WAR</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
         </div>
 
         <div class="shop-item">
             <img src="Images/TBS/JUXTAPOSED_JEWELZ.jpeg" alt="Piece 5">
-            <button class="more-info">JUXTAPOSED_JEWELZ</button>
+            <button class="more-info" onclick="showDetails('JUXTAPOSED_JEWELZ')">JUXTAPOSED_JEWELZ</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
         </div>
 
         <div class="shop-item">
             <img src="Images/photography/ART5.jpeg" alt="Piece 6">
-            <button class="more-info">WAR</button>
+            <button class="more-info" onclick="showDetails('WAR')">WAR</button>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
         </div>
 
         <!-- Repeat the above structure for additional pieces -->
+    </section>
+
+     <!-- Modal -->
+     <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-description"></div>
+        </div>
     </div>
-    <script>
-        function transitionToPage(pageURL) {
-            window.location.href = pageURL;
-        }
-    </script>
 </body>
 </html>
