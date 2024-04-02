@@ -9,20 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Tilt+Neon&display=swap" rel="stylesheet">
     <title>Gallery</title>
     <style>
-        body {
-            background-image: url('Images/photography/BACKGROUND.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+    
         .container {
             background-color: white;
             height: 100%;
-            background-image: url('Images/photography/BACKGROUND.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
+        
         .image-collection {
             margin-bottom: 30px;
             display: flex;
@@ -33,30 +28,22 @@
             padding: 20px; /* Add padding for better spacing */
             box-sizing: border-box;
         }
-        .collection-name {
-            color: black;
-            font-family: "Protest Revolution", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
         .image-container-item {
             width: 300px;
             height: 300px;
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             position: relative;
             overflow: hidden;
             margin-right: 20px;
-            border: 10px solid #fff; /* Add a white border with 10px thickness */
+            border: 20px solid #fff; /* Add a white border with 10px thickness */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
         }
 
         .image-container-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Maintain aspect ratio */
+            object-fit: scale-down; /* Maintain aspect ratio */
         }
         .footer {
             background-color: black;
@@ -66,29 +53,14 @@
             width: 100%;
             font-family: "Protest Revolution", sans-serif;
         }
-        .logo {
-            color: black;
-            text-align: center;
-            margin-top: auto;
-            padding: 10px;
-            background-color: white(0, 0, 0, 0.7);
-        }
-        .social-media ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        .social-media li {
-            margin: 0 10px;
-        }
 
     </style>
 </head>
 <body>
     <div class="logo">
-        <h1>SHAMMY'S FACTORY</h1>  
+        <a href="index.html">
+            <h1>SHAMMY'S GALLERY</h1>
+        </a>
     </div>
     <div class="tab-bar">
         <ul>
@@ -104,18 +76,17 @@
 
     <div class="container">
         <div class="image-collection">
-            <div class="collection-name">S&N</div>
             <div class="image-container-item">
-                <img src="Images/photography/S&N1.jpeg" alt="Text on Image 1">
+                <img src="Images/ATTITUDE_OF_JUSTICE/ATTITUDE_OF_JUSTICE.jpeg" alt="ATTITUDE_OF_JUSTICE">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/S&N2.jpeg" alt="Text on Image 2">
+                <img src="Images/photography/MOM1.jpeg" alt="MOM">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/S&N3.jpeg" alt="Text on Image 3">
+                <img src="Images/ATTITUDE_OF_JUSTICE/LABOUR.jpeg" alt="LABOUR">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/S&N10.jpeg" alt="Text on Image 3">
+                <img src="Images/ATTITUDE_OF_JUSTICE/CAMO.jpeg" alt="CAMO">
             </div>
             <!-- Add more image-container-items for Collection Name 1 -->
         </div>
@@ -123,18 +94,17 @@
         <!-- COLLECTION 2-->
 
         <div class="image-collection">
-            <div class="collection-name">TRACY</div>
             <div class="image-container-item">
-                <img src="Images/photography/TRACY2.jpeg" alt="Text on Image 1">
+                <img src="Images/TBS/JUXTAPOSED_JEWELZ.jpeg" alt="JUXTAPOSED_JEWELZ">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/CAR1.jpeg" alt="Text on Image 1">
+                <img src="Images/photography/CHARCOAL2.jpeg" alt="Charcoal 2">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/TRACY1.jpeg" alt="Text on Image 2">
+                <img src="Images/photography/CHARCOAL1.jpeg" alt="CHARCOAL1">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/TRACY3.jpeg" alt="Text on Image 3">
+                <img src="Images/photography/AMA2.jpeg" alt="AMA">
             </div>
             <!-- Add more image-container-items for Collection Name 1 -->
         </div>
@@ -143,18 +113,17 @@
 
 
         <div class="image-collection">
-            <div class="collection-name">VOGUE</div>
             <div class="image-container-item">
-                <img src="Images/photography/AMA7.jpeg" alt="Text on Image 1">
+                <img src="Images/MARADONA/MARADONA.jpg" alt="DIEGO">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/AMA2.jpeg" alt="Text on Image 2">
+                <img src="Images/MARLEY/MARLEY.jpg" alt="MARLEY">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/AMA3.jpeg" alt="Text on Image 3">
+                <img src="Images/ATTITUDE_OF_JUSTICE/WAR.jpeg" alt="WAR">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/AMA4.jpeg" alt="Text on Image 3">
+                <img src="Images/TALES_OF_S&N/IMG_4419.jpeg" alt="TALES_OF_S&N">
             </div>
             <!-- Add more image-container-items for Collection Name 1 -->
         </div>
@@ -162,15 +131,20 @@
         <!-- COLLECTION 4-->
 
         <div class="image-collection">
-            <div class="collection-name">MOM</div>
             <div class="image-container-item">
-                <img src="Images/photography/MOM1.jpeg" alt="Text on Image 1">
+                <img src="Images/UNCHARTED/UNCHARTED4.jpg" alt="UNCHARTED">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/MONEY1.jpeg" alt="Text on Image 2">
+                <img src="Images/UNCHARTED/UNCHARTED2.jpg" alt="UNCHARTED">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/MOM2.jpeg" alt="Text on Image 3">
+                <img src="Images/UNCHARTED/UNCHARTED3.jpg" alt="UNCHARTED">
+            </div>
+            <div class="image-container-item">
+                <img src="Images/UNCHARTED/UNCHARTED1.jpg" alt="UNCHARTED">
+            </div>
+            <div class="image-container-item">
+                <img src="Images/UNCHARTED/UNCHARTED5.jpg" alt="UNCHARTED">
             </div>
             <!-- Add more image-container-items for Collection Name 1 -->
         </div>
@@ -178,21 +152,20 @@
         <!-- COLLECTION 5-->
 
         <div class="image-collection">
-            <div class="collection-name">COURT</div>
             <div class="image-container-item">
-                <img src="Images/photography/COURT1.jpeg" alt="Text on Image 1">
+                <img src="Images/TALES_OF_S&N/IMG_0313.jpeg" alt="TALES_OF_S&N">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/COURT7.jpeg" alt="Text on Image 2">
+                <img src="Images/TALES_OF_S&N/IMG_0321.jpeg" alt="TALES_OF_S&N">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/COURT4.jpeg" alt="Text on Image 3">
+                <img src="Images/photography/COURT4.jpeg" alt="TALES_OF_S&N">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/COURT6.jpeg" alt="Text on Image 3">
+                <img src="Images/photography/COURT6.jpeg" alt="TALES_OF_S&N">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/COURT5.jpeg" alt="Text on Image 3">
+                <img src="Images/TALES_OF_S&N/IMG_0425.jpeg" alt="TALES_OF_S&N">
             </div>
             <!-- Add more image-container-items for Collection Name 1 -->
         </div>
@@ -200,31 +173,56 @@
         <!-- COLLECTION 6-->
 
         <div class="image-collection">
-            <div class="collection-name">DRAWING</div>
             <div class="image-container-item">
-                <img src="Images/photography/DRAWING1.jpeg" alt="Text on Image 1">
+                <img src="Images/photography/COURT5.jpeg" alt="AMA">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/DRAWING2.jpeg" alt="Text on Image 2">
+                <img src="Images/photography/BACKGROUND.jpeg" alt="AMA">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/DRAWING3.jpeg" alt="Text on Image 3">
+                <img src="Images/photography/AMA7.jpeg" alt="AMA">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/DRAWING4.jpeg" alt="Text on Image 3">
+                <img src="Images/photography/COURT3.jpeg" alt="COURT">
+            </div>
+            <!-- Add more image-container-items for Collection Name 1 -->
+        </div>
+
+        <!-- COLLECTION 7-->
+
+        <div class="image-collection">
+            <div class="image-container-item">
+                <img src="Images/TBS/E26370AC-77C4-47EF-822F-2EA9D28E0D72.jpeg" alt="MONEY">
+            </div>
+            <div class="image-container-item">
+                <img src="Images/REDROOM_DOODLES/IMG_1463.jpeg" alt="REDROOM_DOODLES">
+            </div>
+            <div class="image-container-item">
+                <img src="Images/photography/DRAWING2.jpeg" alt="REDROOM_DOODLES">
+            </div>
+            <div class="image-container-item">
+                <img src="Images/REDROOM_DOODLES/IMG_1462.jpeg" alt="REDROOM_DOODLES">
+            </div>
+            <!-- Add more image-container-items for Collection Name 1 -->
+        </div>
+
+         <!-- COLLECTION 8-->
+
+         <div class="image-collection">
+            <div class="image-container-item">
+                <img src="Images/photography/SHAMMY2.jpeg" alt="SHAMMY">
+            </div>
+            <div class="image-container-item">
+                <img src="Images/photography/EUGENE1.jpeg" alt="REDROOM_DOODLES"> <!--To be switched, last one too (You-Phoria)-->
+            </div>
+            <div class="image-container-item">
+                <img src="Images/photography/EUGENE3.jpeg" alt="REDROOM_DOODLES">
+            </div>
+            <div class="image-container-item">
+                <img src="Images/TBS/WEEZY.jpeg" alt="WEEZY">
             </div>
             <!-- Add more image-container-items for Collection Name 1 -->
         </div>
     </div>
-
-    <footer class="footer">
-        <p>© 2021 Shammy's Factory</p>
-        <div class="social-media">
-            <ul>
-                <li><a href="https://www.instagram.com/shammys.gallery/" target="_blank"><img src="Images/instagramlogo.jpeg" alt="Instagram"></a></li>
-                <!-- Add more social media links as needed -->
-            </ul>
-        </div>
-    </footer>
 </body>
 </html>

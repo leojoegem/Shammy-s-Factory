@@ -1,228 +1,56 @@
 body {
-    background-color: white;
-    color: white; /* Set text color to white */
-    font-family: 'Eater', serif;
-    color: white;
-}
-h2,h3 {
-  font-family: "Protest Revolution", sans-serif;
-}
-.logo {
-    justify-content: center;
-    display: flex;
-    color: black;
+  background-color: white;
+  color: black; /* Set text color to black */
+  font-family: 'Eater', serif;
 }
 
-/*login/sign up/cart */
+h2, h3 {
+  font-family: "Protest Revolution", sans-serif;
+}
+
 .logo {
-  position: center;
   font-family: "Protest Revolution", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.header-buttons {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  justify-content: center;
   display: flex;
-  gap: 10px;
 }
 
-.login-signup-button,
-.cart-button {
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.logo a {
+  color: black; /* Set the color of the link text */
+  text-decoration: none; /* Remove underline */
 }
 
-.login-signup-button:hover,
-.cart-button:hover {
-  background-color: #555;
+.logo a:hover {
+  color: black; /* Set the color when hovering over the link */
 }
 
 .tab-bar {
-    background-color: black;
-    color: black; /* Set background color */
-  }
-  
-  .tab-bar ul {
-    list-style-type: none; /* Remove default list styling */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Use flexbox to evenly spread elements */
-    justify-content: space-evenly; /* Spread elements evenly */
-    font-family: "Protest Revolution", sans-serif;
-  }
-  
-  .tab-bar li {
-    display: inline;
- /* Display list items inline */
-  }
-  
-  .tab-bar a {
-    display: block; /* Make anchor elements block-level for styling */
-    padding: 10px 20px; /* Add padding for better visual appearance */
-    text-decoration: none;
-    color: white; /* Set text color */
-  }
-  
-  /* Hover effect */
-  .tab-bar a:hover {
-    background-color: #555; /* Change background color on hover */
-  }
-  .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 10px;
+  background-color: black;
+  color: white; /* Set text color */
 }
 
-/* Style for the image container item (each image with text) */
-.image-container-item {
-    position:relative; /* Establishes positioning context for absolute positioning */
-    width: 49%; /* Set the width to 48% for two images per line with a small gap */
-    height: 400px; /* Set a fixed height for all images */
-    margin-bottom: 5px;
-    border: 1px solid #ccc; /* Add a border for better separation */
-    border-color: black;
-    overflow: hidden; /* Hide overflow to contain absolutely positioned text */
-    background-position:center center;
-    background-size: cover;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-/* Style for the text inside the image container item */
-.image-text {
-    position: absolute;
-    top: 50%; /* Center the text vertically */
-    left: 50%; /* Center the text horizontally */
-    transform: translate(-50%, -50%); /* Center the text precisely */
-    color: white; /* Set text color to white */
-    font-size: 18px; /* Set the font size */
-    opacity: 50%; /* Initially hide the text */
-    transition: opacity 0.3s ease; /* Add a smooth transition effect */
-}
-
-/* Show the text when hovering over the container */
-.image-container-item:hover {
-    opacity: 1;
-    filter: brightness(0.8); /* Dim the image */
-    transform: scale(1.05); /* Pop-out effect */
-}
-
-ul {
-  list-style: none; /* Remove the bullet points */
+.tab-bar ul {
+  list-style-type: none; /* Remove default list styling */
+  margin: 0;
   padding: 0;
-}
-
-ul li img {
-  width: 30px; /* Set the desired width */
-  height: 30px; /* Set the desired height */
-  border-radius: 100%; /* Optional: Adds a circular border */
-}
-
-/* Add styles for the shop items */
-.shop-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.shop-item {
-  width: 30%; /* Adjust the width as needed for three items per row */
-  margin: 20px 0;
-  text-align: center;
-}
-
-.shop-item img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #ccc; /* Add a border for better separation */
-}
-
-.shop-item h3 {
-  margin: 10px 0;
-  font-size: 1.5em;
-}
-
-.shop-item p.price {
-  font-weight: bold;
-  color: #4CAF50; /* Green color for price */
-}
-
-.shop-item p.description {
-  margin: 10px 0;
-}
-/* Styling for the artists intro box... */
-
-/* Existing styles... */
-
-.artist-introduction {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1a1a1a; /* Darker background color for elegance */
-  padding: 40px; /* Increased padding for a more spacious feel */
-  margin-top: 40px; /* Increased margin for separation */
-  border-radius: 10px; /* Rounded corners for an elegant touch */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-}
-
-.artist-info {
-  flex: 1;
-  color: #e0e0e0; /* Lighter text color for contrast */
-}
-
-.artist-info h2 {
-  font-size: 2.5em; /* Larger font size for the artist's name */
-}
-
-.artist-info p {
-  line-height: 1.5; /* Increased line height for better readability */
-}
-
-.artist-photo img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 10px; /* Rounded corners for the photo */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for the photo */
-}
-.photoDescription {
-  position: relative;
-}
-
-.photo-one {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px; /* Rounded corners for the photo */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px; /* Add margin to separate the description */
-}
-
-.photo-info {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; /* Center text in the middle */
-  color: #fff; /* Set text color to white for better readability */
-}
-
-/* Additional styling for other elements if needed */
-.protest-revolution-regular {
+  display: flex; /* Use flexbox to evenly spread elements */
+  justify-content: space-evenly; /* Spread elements evenly */
   font-family: "Protest Revolution", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
-h2, h3, p {
-  margin-bottom: 10px; /* Adjust the value as needed */
-  margin-right: 100px;
+.tab-bar li {
+  display: inline; /* Display list items inline */
+}
+
+.tab-bar a {
+  display: block; /* Make anchor elements block-level for styling */
+  padding: 10px 20px; /* Add padding for better visual appearance */
+  text-decoration: none;
+  color: white; /* Set text color */
+}
+
+/* Hover effect */
+.tab-bar a:hover {
+  background-color: #555; /* Change background color on hover */
 }
