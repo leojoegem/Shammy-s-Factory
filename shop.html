@@ -9,91 +9,160 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Tilt+Neon&display=swap" rel="stylesheet">
     <title>Shop</title>
+
     <style>
+        /* SHOP */
 
 .modal {
-            display: none;
-            position: fixed;
-            z-index: 999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color:rgba(0, 0, 0, 0.5);
-        }
-
-.modal-content {
-            background-color: black;
-            margin: 20% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-
-.close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-.close:hover,
- .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-
-.shop-item {
-  font-family: monospace, sans-serif;
-  margin: 1rem;
-  border: 3px solid #776e62;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:rgba(0, 0, 0, 0.5);
 }
 
+.modal-content {
+    background-color: black;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2rem; /* Adjust as needed */
+}
+
+.shop-item {
+    font-family: monospace, sans-serif;
+    margin: 1rem;
+    border: 3px solid #776e62;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: calc(30% - 2rem); /* Display three items per row */
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    .shop-item {
+        width: calc(45% - 2rem); /* Display one item per row */
+    }
+}
+
+.shop-item img {
+    width: 100%;
+    display: block;
+}
+
+
 .more-info {
-  position: relative;
-  padding: 1rem 2rem 0.5rem 2.5rem;
-  color: #000000;
-  border: 3px solid #776e62;
-  -webkit-transition: padding 0.3s ease-in-out;
-  transition: padding 0.3s ease-in-out;
-  font-family: "Protest Revolution", sans-serif;
-  font-size: medium;
+    font-family: "copperplate", sans-serif;
+    font-size: 14px; /* Adjust the font size as needed */
+    padding: 8px 12px; /* Adjust the padding to add space around the button */
+    margin-top: 12px; /* Add some space between the button and the image */
+    background-color: #fff; /* Set background color */
+    border: 2px solid #776e62; /* Set border */
+    border-radius: 5px; /* Add rounded corners */
+    color: #776e62; /* Set text color */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .more-info:before {
-  content: "";
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  background-color: #ffffff;
-  border-right: 3px solid #ffffff;
-  border-bottom: 3px solid #ffffff;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border-right: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .more-info:hover {
-  padding: 0.75rem 2.25rem;
+    background-color: #776e62; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
 }
 
 .more-info:hover:before {
-  top: 0;
-  left: 0;
+    top: 0;
+    left: 0;
 }
 .description {
     color: black;
-    font-family: copperplate, sans-serif;
+    font-family: "copperplate", sans-serif;
+}
+
+.details {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.medium,
+.size {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #776e62; /* Adjust color as needed */
+    font-family: "Tilt Neon", sans-serif; /* Use desired font */
+}
+
+.shop-item img {
+    width: 100%;
+    display: block;
+    padding-bottom: 20px; /* Add bottom padding to create space */
+}
+
+.logo {
+    text-align: center;
+    display: block;
+    font-size: 13px;
+}
+.logo2 {
+    font-family: "copperplate", sans-serif;
+}
+.logo3 {
+    font-family: "copperplate", sans-serif;
+    color: white;
+}
+.logo4 {
+    font-family: "copperplate", sans-serif;
+    color: white;
+    font-size: 12px;
+}
+.row {
+    font-family: "copperplate", sans-serif;
 }
 
     </style>
@@ -101,65 +170,163 @@
 <body>
     <div class="logo">
         <h1>SHAMMY'S GALLERY</h1>
+        <div>
+            <h3 class="logo2">BY SHAMMY</h3>
+        </div>
     </div>
     <div class="tab-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.html">Portfolio</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 
+    <!--Modal to open photo  -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+      </div>
+
+
     <!-- Shop pieces section -->
     <section class="shop-section">
         <div class="shop-item">
-            <img src="Images/ATTITUDE_OF_JUSTICE/ATTITUDE_OF_JUSTICE.jpeg" alt="Piece 1">
-            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')">ATTITUDE_OF_JUSTICE</button>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
+            <img src="Images/MARLEY/MARLEY.jpg" alt="Piece 1">
+            <button class="more-info" onclick="showDetails('MARLEY')" style="display: block; margin: 0 auto;">MARLEY..." '</button>
+            <div class="details">
+                <p class="medium">Medium: Charcoal</p>
+                <p class="size">Size: 27.5 inches by 37 inches</p>
+            </div>
         </div>
 
         <div class="shop-item">
-            <img src="Images/ATTITUDE_OF_JUSTICE/CAMO.jpeg" alt="Piece 2">
-            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')">ATTITUDE_OF_JUSTICE | CAMO</button>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
+            <img src="Images/JUXTAPOSED_JEWELZ/JUXTAPOSED_JEWELZ.jpg" alt="Piece 2">
+            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')" style="display: block; margin: 0 auto;">JUXTAPOSED JEWELZ.</button>
+            <div class="details">
+                <p class="medium">Medium: Mixed Media</p>
+                <p class="size">Size: 841x 1189 mm</p>
+            </div>
+        </div>
+        
+
+        <div class="shop-item">
+            <img src="Images/MARADONA/MARADONA.jpg" alt="Piece 3">
+            <button class="more-info" onclick="showDetails('DIEGO')" style="display: block; margin: 0 auto;">DIEGO..." '</button>
+            <div class="details">
+                <p class="medium">Medium: Charcoal on Paper</p>
+                <p class="size">Size: 841mm x 1189mm</p>
+            </div>
+        </div>
+
+
+        <div class="shop-item">
+            <img src="Images/photography/CHARCOAL1.jpeg" alt="Piece 4">
+            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')" style="display: block; margin: 0 auto;">EVERYBODY 1/2</button>
+            <div class="details">
+                <p class="medium">Medium: Mixed Medis</p>
+                <p class="size">Size: 297 x 420mm</p>
+            </div>
+        </div>
+
+
+        <div class="shop-item">
+            <img src="Images/photography/CHARCOAL2.jpeg" alt="Piece 6">
+            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')" style="display: block; margin: 0 auto;">EVERYBODY 2/2</button>
+            <div class="details">
+                <p class="medium">Medium: Mixed Media</p>
+                <p class="size">Size: 297 x 420mm</p>
+            </div>
+        </div>
+
+
+        <div class="shop-item">
+            <img src="Images/photography/ART2.jpeg" alt="Piece 5">
+            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')" style="display: block; margin: 0 auto;">ATTITUDE OF JUSTICE 1/4..."</button>
+            <div class="details">
+                <p class="medium">Medium: Charcoal hand drawing</p>
+                <p class="size">Size: 594 x 841 mm</p>
+            </div>
+        </div>
+
+
+
+        <div class="shop-item">
+            <img src="Images/photography/MOM2.jpeg" alt="Piece 7">
+            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')" style="display: block; margin: 0 auto;">ATTITUDE OF JUSTICE 2/4..." '</button>
+            <div class="details">
+                <p class="medium">Medium: Charcoal hand drawing</p>
+                <p class="size">Size: 594 x 841 mm</p>
+            </div>
+        </div>
+
+
+
+        <div class="shop-item">
+            <img src="Images/ATTITUDE_OF_JUSTICE/CAMO.jpeg" alt="Piece 8">
+            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')" style="display: block; margin: 0 auto;">ATTITUDE OF JUSTICE 3/4.." '</button>
+            <div class="details">
+                <p class="medium">Medium: Charcoal hand drawing</p>
+                <p class="size">Size: 594 x 841 mm</p>
+            </div>
         </div>
 
         <div class="shop-item">
-            <img src="Images/ATTITUDE_OF_JUSTICE/LABOUR.jpeg" alt="Piece 3">
-            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')">ATTITUDE OF JUSTICE | LABOUR</button>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
+            <img src="Images/ATTITUDE_OF_JUSTICE/LABOUR.jpeg" alt="Piece 9">
+            <button class="more-info" onclick="openModal('JUXTAPOSED_JEWELZ')" style="display: block; margin: 0 auto;">ATTITUDE OF JUSTICE 4/4..." '</button>
+            <div class="details">
+                <p class="medium">Medium: Charcoal hand drawing</p>
+                <p class="size">Size: 594 x 841 mm</p>
+            </div>
         </div>
 
         <div class="shop-item">
-            <img src="Images/ATTITUDE_OF_JUSTICE/WAR.jpeg" alt="Piece 4">
-            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')">ATTITUDE OF JUSTICE | WAR</button>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
-        </div>
-
-        <div class="shop-item">
-            <img src="Images/TBS/JUXTAPOSED_JEWELZ.jpeg" alt="Piece 5">
-            <button class="more-info" onclick="showDetails('JUXTAPOSED_JEWELZ')">JUXTAPOSED_JEWELZ</button>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
-        </div>
-
-        <div class="shop-item">
-            <img src="Images/photography/ART5.jpeg" alt="Piece 6">
-            <button class="more-info" onclick="showDetails('WAR')">WAR</button>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac velit risus.</p>
+            <img src="Images/photography/ART5.jpeg" alt="Piece 9">
+            <button class="more-info" onclick="showDetails('WAR')" style="display: block; margin: 0 auto;">WAR</button>
+            <div class="details">
+                <p class="medium">Medium: Oil on Canvas</p>
+                <p class="size">Size: 24x36 inches</p>
+            </div>
         </div>
 
         <!-- Repeat the above structure for additional pieces -->
     </section>
 
-     <!-- Modal -->
-     <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modal-title"></h2>
-            <div id="modal-description"></div>
+    <footer class="footer">
+        <div class="row">
+            <ul>
+                <li><a href="https://www.instagram.com/shammys.gallery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">INSTAGRAM</a></li>
+                <li><a href="https://www.linkedin.com/in/shamiltonomwenga?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LINKEDIN</a></li>
+                <li><a href="https://www.vogue.com/photovogue/photographers/313512" target="_blank">PORTFOLIO</a></li>
+            </ul>
         </div>
-    </div>
+    
+        <div class="row">
+            Shammy's Gallery © 2024 - All rights reserved
+        </div>
+
+        <div class="logo3">
+            SHAMMY'S GALLERY
+            <div>
+                <h3 class="logo4">BY SHAMMY</h3>
+            </div> 
+        </div>
+    </footer>
+
+    <script>
+        function openModal(imageUrl) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImg");
+        modal.style.display = "block";
+        modalImg.src = imageUrl;
+        }
+
+        function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>

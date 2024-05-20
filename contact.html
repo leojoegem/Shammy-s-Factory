@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Contact</title>
     <style>
 
@@ -16,14 +16,20 @@
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "copperplate", sans-serif;
 }
 
 .contact-container h2 {
     text-align: center;
+    font-family: "copperplate", sans-serif;
 }
 
 .artist-info {
     text-align: center;
+    margin-top: 20px;
 }
 
 .artist-info img {
@@ -33,6 +39,10 @@
 
 .contact-form {
     margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    text-align: left;
 }
 
 form {
@@ -60,18 +70,37 @@ button {
 button:hover {
     background-color: #555;
 }
+.row {
+    font-family: "copperplate", sans-serif;
+}
+.logo2 {
+    font-family: "copperplate", sans-serif;
+}
+
+.logo3 {
+    font-family: "copperplate", sans-serif;
+    color: white;
+}
+.logo4 h3 {
+    font-family: "copperplate", sans-serif;
+    color: white;
+    font-size: 12px;
+}
 
     </style>
 </head>
 <body>
     <div class="logo">
         <h1>SHAMMY'S GALLERY</h1>
+        <div>
+            <h3 class="logo2">BY SHAMMY</h3>
+        </div>
     </div>
 
     <div class="tab-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.html">Portfolio</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="events.html">Events</a></li>
             <li class="active"><a href="contact.html">Contact</a></li>
@@ -79,28 +108,50 @@ button:hover {
     </div>
 
     <div class="contact-container">
-        <h2>Contact the Artist</h2>
+        <h2>Get in touch</h2>
         <div class="artist-info">
-            <img src="artist.jpg" alt="Artist Name">
-            <h3>Artist Name</h3>
-            <p>Visual Artist</p>
+            <img src="Images/HOME/COVER1.jpg" alt="Artist Name">
         </div>
 
         <div class="contact-form">
-            <form action="#" method="POST">
+            <form action="contactform.php" method="POST">
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
 
                 <label for="email">Your Email:</label>
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
 
+                <label for="Subject">Subject:</label>
+                <input type="subject" id="subject" name="subject" placeholder="Subject" required>
+
                 <label for="message">Your Message:</label>
                 <textarea id="message" name="message" placeholder="Type your message here" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <button type="submit" name="submit">Send Email</button>
             </form>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="row">
+            <ul>
+                <li><a href="https://www.instagram.com/shammys.gallery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">INSTAGRAM</a></li>
+                <li><a href="https://www.linkedin.com/in/shamiltonomwenga?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LINKEDIN</a></li>
+                <li><a href="https://www.vogue.com/photovogue/photographers/313512" target="_blank">PORTFOLIO</a></li>
+            </ul>
+        </div>
+    
+        <div class="row">
+            Shammy's Gallery © 2024 - All rights reserved
+        </div>
+
+        <div class="logo3">
+            SHAMMY'S GALLERY 
+            <div class="logo4">
+                <h3>BY SHAMMMY</h3>
+            </div>
+        </div>
+    </footer>
 
     <script>
         function transitionToPage(pageURL) {

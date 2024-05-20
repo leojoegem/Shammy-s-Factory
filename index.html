@@ -11,12 +11,15 @@
 </head>
 <body>
     <div class="logo">
-        <h1>SHAMMY'S GALLERY</h1>
+        <h1>SHAMMY'S GALLERY</h1> 
+        <div>
+            <h3 class="logo2">BY SHAMMY</h3>
+        </div>
     </div>
     <div class="tab-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.html">Portfolio</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -31,9 +34,32 @@
             <p>Shamilton(Shammy) is a mixed media artist mainly focusing on fine art, photograpihy and film. Hailing from the vibrant city of Nairobi, Kenya, and currently living in England, Shammy has used his childhood love for drawing and digital art to create artistic expressions and create pieces which are a symbol of diversity. His work has caught the eye of organisations such as the United Nations and featured across different exhibitions both in Africa and Europe. After starting off in his early years as a traditional artist, focusing mostly on charcoal, pencil art and paint/graffiti, he later transitioned to photography, film and Architecture.</p>
         </div>
         <div class="artist-photo">
-            <img src="Images/photography/DRAWING2.jpeg" alt="Artist Photo">
+          <img src="Images/HOME/COVER1.jpg" alt="SHAMMY">
+          <img src="Images/HOME/COVER2.jpg" alt="SHAMMY2">
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="row">
+            <ul>
+                <li><a href="https://www.instagram.com/shammys.gallery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">INSTAGRAM</a></li>
+                <li><a href="https://www.linkedin.com/in/shamiltonomwenga?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LINKEDIN</a></li>
+                <li><a href="https://www.vogue.com/photovogue/photographers/313512" target="_blank">PORTFOLIO</a></li>
+            </ul>
+        </div>
+    
+        <div class="row">
+            Shammy's Gallery © 2024 - All rights reserved
+        </div>
+
+        <div class="logo3">
+            SHAMMY'S GALLERY
+            <div>
+                <h3 class="logo4">BY SHAMMY</h3>
+            </div> 
+        </div>
+    </footer>
+    
 
 
     <script>
@@ -42,6 +68,19 @@
         }
     </script>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+
+        function slideTop() {
+            var secondImage = document.querySelector('.artist-photo img:nth-child(2)');
+            secondImage.style.marginTop = '-15px';
+        }
+
+        function slideBack() {
+            var secondImage = document.querySelector('.artist-photo img:nth-child(2)');
+            secondImage.style.marginTop = '0';
+        }
+      </script>
+
+
 </body>
 </html>

@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Tilt+Neon&display=swap" rel="stylesheet">
     <title>Gallery</title>
     <style>
-    
+
         .container {
             background-color: white;
             height: 100%;
@@ -34,10 +34,26 @@
             background-size: contain;
             background-position: center;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             margin-right: 20px;
             border: 20px solid #fff; /* Add a white border with 10px thickness */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+        }
+
+        .image-container-item:hover::after {
+            content: attr(title);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 999; /* Ensure the tooltip appears on top of other elements */
         }
 
         .image-container-item img {
@@ -53,6 +69,27 @@
             width: 100%;
             font-family: "Protest Revolution", sans-serif;
         }
+        .logo {
+            text-align: center;
+            display: block;
+            font-size: 13px;
+        }
+        .logo2 {
+            font-family: "copperplate", sans-serif;
+            color: white;
+        }
+        .logo3 {
+            font-family: "copperplate", sans-serif;
+            color: white;
+        }
+        .logo4 {
+            font-family: "copperplate", sans-serif;
+            color: white;
+            font-size: 12px;
+        }
+        .row {
+            font-family: "copperplate", sans-serif;
+        }
 
     </style>
 </head>
@@ -60,12 +97,15 @@
     <div class="logo">
         <a href="index.html">
             <h1>SHAMMY'S GALLERY</h1>
+            <div>
+                <h3 class="logo2">BY SHAMMY</h3>
+            </div>
         </a>
     </div>
     <div class="tab-bar">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.html">Portfolio</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -77,36 +117,34 @@
     <div class="container">
         <div class="image-collection">
             <div class="image-container-item">
-                <img src="Images/ATTITUDE_OF_JUSTICE/ATTITUDE_OF_JUSTICE.jpeg" alt="ATTITUDE_OF_JUSTICE">
+                <img src="Images/ATTITUDE_OF_JUSTICE/ATTITUDE_OF_JUSTICE.jpeg" alt="ATTITUDE_OF_JUSTICE" title="ATTITUDE_OF_JUSTICE">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/MOM1.jpeg" alt="MOM">
+                <img src="Images/photography/MOM1.jpeg" alt="MOM" title="MOM">
             </div>
             <div class="image-container-item">
-                <img src="Images/ATTITUDE_OF_JUSTICE/LABOUR.jpeg" alt="LABOUR">
+                <img src="Images/ATTITUDE_OF_JUSTICE/LABOUR.jpeg" alt="LABOUR" title="LABOUR">
             </div>
             <div class="image-container-item">
-                <img src="Images/ATTITUDE_OF_JUSTICE/CAMO.jpeg" alt="CAMO">
+                <img src="Images/ATTITUDE_OF_JUSTICE/CAMO.jpeg" alt="CAMO" title="CAMO">
             </div>
-            <!-- Add more image-container-items for Collection Name 1 -->
         </div>
 
         <!-- COLLECTION 2-->
 
         <div class="image-collection">
             <div class="image-container-item">
-                <img src="Images/TBS/JUXTAPOSED_JEWELZ.jpeg" alt="JUXTAPOSED_JEWELZ">
+                <img src="Images/TBS/JUXTAPOSED_JEWELZ.jpeg" alt="JUXTAPOSED_JEWELZ" title="JUXTAPOSED_JEWEL">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/CHARCOAL2.jpeg" alt="Charcoal 2">
+                <img src="Images/photography/CHARCOAL2.jpeg" alt="Charcoal 2" title="CHARCOAL">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/CHARCOAL1.jpeg" alt="CHARCOAL1">
+                <img src="Images/photography/CHARCOAL1.jpeg" alt="CHARCOAL1" title="CHARCOAL">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/AMA2.jpeg" alt="AMA">
+                <img src="Images/photography/AMA2.jpeg" alt="AMA" title="AMA">
             </div>
-            <!-- Add more image-container-items for Collection Name 1 -->
         </div>
 
         <!-- COLLECTION 3-->
@@ -114,115 +152,148 @@
 
         <div class="image-collection">
             <div class="image-container-item">
-                <img src="Images/MARADONA/MARADONA.jpg" alt="DIEGO">
+                <img src="Images/MARADONA/MARADONA.jpg" alt="DIEGO" title="DIEGO">
             </div>
             <div class="image-container-item">
-                <img src="Images/MARLEY/MARLEY.jpg" alt="MARLEY">
+                <img src="Images/MARLEY/MARLEY.jpg" alt="MARLEY" title="MARLEY">
             </div>
             <div class="image-container-item">
-                <img src="Images/ATTITUDE_OF_JUSTICE/WAR.jpeg" alt="WAR">
+                <img src="Images/ATTITUDE_OF_JUSTICE/WAR.jpeg" alt="WAR" title="WAR">
             </div>
             <div class="image-container-item">
-                <img src="Images/TALES_OF_S&N/IMG_4419.jpeg" alt="TALES_OF_S&N">
+                <img src="Images/TALES_OF_S&N/IMG_4419.jpeg" alt="TALES_OF_S&N" title="TALES_OF_S&N">
             </div>
-            <!-- Add more image-container-items for Collection Name 1 -->
         </div>
 
         <!-- COLLECTION 4-->
 
         <div class="image-collection">
             <div class="image-container-item">
-                <img src="Images/UNCHARTED/UNCHARTED4.jpg" alt="UNCHARTED">
+                <img src="Images/UNCHARTED/UNCHARTED4.jpg" alt="UNCHARTED" title="UNCHARTED">
             </div>
             <div class="image-container-item">
-                <img src="Images/UNCHARTED/UNCHARTED2.jpg" alt="UNCHARTED">
+                <img src="Images/UNCHARTED/UNCHARTED2.jpg" alt="UNCHARTED" title="UNCHARTED">
             </div>
             <div class="image-container-item">
-                <img src="Images/UNCHARTED/UNCHARTED3.jpg" alt="UNCHARTED">
+                <img src="Images/UNCHARTED/UNCHARTED3.jpg" alt="UNCHARTED" title="UNCHARTED">
             </div>
             <div class="image-container-item">
-                <img src="Images/UNCHARTED/UNCHARTED1.jpg" alt="UNCHARTED">
+                <img src="Images/UNCHARTED/UNCHARTED1.jpg" alt="UNCHARTED" title="UNCHARTED">
             </div>
             <div class="image-container-item">
-                <img src="Images/UNCHARTED/UNCHARTED5.jpg" alt="UNCHARTED">
+                <img src="Images/UNCHARTED/UNCHARTED5.jpg" alt="UNCHARTED" title="UNCHARTED">
             </div>
-            <!-- Add more image-container-items for Collection Name 1 -->
         </div>
 
         <!-- COLLECTION 5-->
 
         <div class="image-collection">
             <div class="image-container-item">
-                <img src="Images/TALES_OF_S&N/IMG_0313.jpeg" alt="TALES_OF_S&N">
+                <img src="Images/TALES_OF_S&N/IMG_0313.jpeg" alt="TALES_OF_S&N" title="TALES_OF_S&N">
             </div>
             <div class="image-container-item">
-                <img src="Images/TALES_OF_S&N/IMG_0321.jpeg" alt="TALES_OF_S&N">
+                <img src="Images/TALES_OF_S&N/IMG_0321.jpeg" alt="TALES_OF_S&N" title="TALES_OF_S&N">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/COURT4.jpeg" alt="TALES_OF_S&N">
+                <img src="Images/photography/COURT4.jpeg" alt="TALES_OF_S&N" title="TALES_OF_S&N">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/COURT6.jpeg" alt="TALES_OF_S&N">
+                <img src="Images/photography/COURT6.jpeg" alt="TALES_OF_S&N" title="TALES_OF_S&N">
             </div>
             <div class="image-container-item">
-                <img src="Images/TALES_OF_S&N/IMG_0425.jpeg" alt="TALES_OF_S&N">
+                <img src="Images/TALES_OF_S&N/IMG_0425.jpeg" alt="TALES_OF_S&N" title="TALES_OF_S&N">
             </div>
-            <!-- Add more image-container-items for Collection Name 1 -->
         </div>
 
         <!-- COLLECTION 6-->
 
         <div class="image-collection">
             <div class="image-container-item">
-                <img src="Images/photography/COURT5.jpeg" alt="AMA">
+                <img src="Images/photography/COURT5.jpeg" alt="AMA" title="AMA">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/BACKGROUND.jpeg" alt="AMA">
+                <img src="Images/photography/BACKGROUND.jpeg" alt="AMA" title="AMA">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/AMA7.jpeg" alt="AMA">
+                <img src="Images/photography/AMA7.jpeg" alt="AMA" title="AMA">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/COURT3.jpeg" alt="COURT">
+                <img src="Images/photography/COURT3.jpeg" alt="COURT" title="COURT">
             </div>
-            <!-- Add more image-container-items for Collection Name 1 -->
         </div>
 
         <!-- COLLECTION 7-->
 
         <div class="image-collection">
             <div class="image-container-item">
-                <img src="Images/TBS/E26370AC-77C4-47EF-822F-2EA9D28E0D72.jpeg" alt="MONEY">
+                <img src="Images/TBS/E26370AC-77C4-47EF-822F-2EA9D28E0D72.jpeg" alt="MONEY" title="MONEY">
             </div>
             <div class="image-container-item">
-                <img src="Images/REDROOM_DOODLES/IMG_1463.jpeg" alt="REDROOM_DOODLES">
+                <img src="Images/REDROOM_DOODLES/IMG_1463.jpeg" alt="REDROOM_DOODLES" title="BEDROOM_DOODLEZ">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/DRAWING2.jpeg" alt="REDROOM_DOODLES">
+                <img src="Images/photography/DRAWING2.jpeg" alt="REDROOM_DOODLES" title="BEDROOM_DOODLEZ">
             </div>
             <div class="image-container-item">
-                <img src="Images/REDROOM_DOODLES/IMG_1462.jpeg" alt="REDROOM_DOODLES">
+                <img src="Images/REDROOM_DOODLES/IMG_1462.jpeg" alt="REDROOM_DOODLES" title="BEDROOM_DOODLEZ">
             </div>
-            <!-- Add more image-container-items for Collection Name 1 -->
         </div>
 
          <!-- COLLECTION 8-->
 
          <div class="image-collection">
             <div class="image-container-item">
-                <img src="Images/photography/SHAMMY2.jpeg" alt="SHAMMY">
+                <img src="Images/photography/SHAMMY2.jpeg" alt="SHAMMY" title="SHAMMY">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/EUGENE1.jpeg" alt="REDROOM_DOODLES"> <!--To be switched, last one too (You-Phoria)-->
+                <img src="Images/UNCHARTED/PANDA.jpg" alt="PANDA" title="PANDA">
             </div>
             <div class="image-container-item">
-                <img src="Images/photography/EUGENE3.jpeg" alt="REDROOM_DOODLES">
+                <img src="Images/TBS/WEEZY.jpeg" alt="WEEZY" title="WEEZY">
             </div>
             <div class="image-container-item">
-                <img src="Images/TBS/WEEZY.jpeg" alt="WEEZY">
+                <img src="Images/UNCHARTED/YOU-PHORIA.jpg" alt="YOU-PHORIA" title="YOU-PHORIA">
             </div>
-            <!-- Add more image-container-items for Collection Name 1 -->
         </div>
+
+        <!-- COLLECTION 8-->
+
+        <div class="image-collection">
+            <div class="image-container-item">
+                <img src="Images/photography/TRACY1.jpeg" alt="TRACY" title="TRACY">
+            </div>
+            <div class="image-container-item">
+                <img src="Images/photography/TRACY3.jpeg" alt="TRACY" title="TRACY">
+            </div>
+            <div class="image-container-item">
+                <img src="Images/photography/TRACY2.jpeg" alt="TRACY" title="TRACY">
+            </div>
+            <div class="image-container-item">
+                <img src="Images/photography/TRACY4.jpeg" alt="TRACY" title="TRACY">
+            </div>
+        </div>
+
     </div>
+
+    <footer class="footer">
+        <div class="row">
+            <ul>
+                <li><a href="https://www.instagram.com/shammys.gallery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">INSTAGRAM</a></li>
+                <li><a href="https://www.linkedin.com/in/shamiltonomwenga?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LINKEDIN</a></li>
+                <li><a href="https://www.vogue.com/photovogue/photographers/313512" target="_blank">PORTFOLIO</a></li>
+            </ul>
+        </div>
+    
+        <div class="row">
+            Shammy's Gallery © 2024 - All rights reserved
+        </div>
+
+        <div class="logo3">
+            SHAMMY'S GALLERY 
+            <div>
+                <h3 class="logo4">BY SHAMMY</h3>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

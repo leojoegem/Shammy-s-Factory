@@ -8,21 +8,165 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Tilt+Neon&display=swap" rel="stylesheet">
     <title>Events</title>
+    <style>
+        .events {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .event {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            border: 2px solid #e0e0e0; /* Stylish border */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Padding around the poster */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            transition: box-shadow 0.3s ease; /* Smooth transition */
+        }
+
+        .event img {
+            max-width: 50%;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .event-details {
+            flex: 1;
+        }
+
+        .event-details h3 {
+            font-size: 24px;
+            padding-bottom: 5px;
+            font-family: "copperplate", sans-serif;
+        }
+        .event-details h4 {
+            font-size: 15px;
+            margin-top: 0;
+            font-family: "copperplate", sans-serif;
+        }
+
+        .event-details {
+            font-family: "Arial", sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            width: 70%; /* Adjusted width to utilize space */
+            margin: 0 auto; /* Center the event details */  
+        }
+
+        .event-details h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .event-details p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .event-details button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }   
+
+        .event-details button:hover {
+            background-color: #0056b3;
+        }
+
+        .event-details {
+            background-image: url('Images/Events/Exhibition1/IMG_0639.jpeg'); /* Specify the path to your background image */
+            background-size: cover; /* Cover the entire div with the background image */
+            background-position: center; /* Center the background image */
+            padding: 20px; /* Add padding to the div to ensure content is visible */
+            color: white;
+            font-size: large;
+        }
+        .logo {
+            text-align: center;
+            display: block;
+            font-size: 13px;
+        }
+        .logo2 {
+            font-family: "copperplate", sans-serif;
+        }
+        .logo3 {
+            font-family: "copperplate", sans-serif;
+            color: white;
+        }
+        .logo4 {
+            font-family: "copperplate", sans-serif;
+            color: white;
+            font-size: 12px;
+        }
+        .row {
+            font-family: "copperplate", sans-serif;
+        }
+
+    </style>
 </head>
 <body>
     <div class="logo">
         <h1>SHAMMY'S GALLERY</h1>
+        <div>
+            <h3 class="logo2">BY SHAMMY</h3>
+        </div>
     </div>
         <div class="tab-bar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="gallery.html">Portfolio</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <h2>Events</h2>
+        <div class="events">
+            <div class="event">
+                <img src="Images/Events/Exhibition1/IMG_0550.jpeg" alt="Event 1">
+                <img src="Images/Events/Exhibition1/IMG_0573.jpeg" alt="Event 1">
+            </div>
+        </div>
+        <div class="events">
+                <div class="event-details">
+                    <h3>THA EXHIBITION</h3>
+                    <h4>BY SHAMMY</h4>
+                    <p><strong>Date:</strong> May 11th, 2024</p>
+                    <p><strong>Location:</strong> SHAMMY'S GALLERY, KAREN</p>
+                    <p><strong>Time:</strong> 10:00 AM - 6:00 PM</p>
+                    <button onclick="transitionToPage('event1.html')">Buy Tickets</button>
+                 </div>
+        </div>
+
+        <footer class="footer">
+            <div class="row">
+                <ul>
+                    <li><a href="https://www.instagram.com/shammys.gallery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">INSTAGRAM</a></li>
+                    <li><a href="https://www.linkedin.com/in/shamiltonomwenga?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LINKEDIN</a></li>
+                    <li><a href="https://www.vogue.com/photovogue/photographers/313512" target="_blank">PORTFOLIO</a></li>
+                </ul>
+            </div>
+        
+            <div class="row">
+                Shammy's Gallery © 2024 - All rights reserved
+            </div>
+    
+            <div class="logo3">
+                SHAMMY'S GALLERY
+                <div>
+                    <h3 class="logo4">BY SHAMMY</h3>
+                </div> 
+            </div>
+        </footer>
         
         <script>
             function transitionToPage(pageURL) {
