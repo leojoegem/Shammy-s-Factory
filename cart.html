@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cart</title>
+    <style>
+        /* Your existing CSS styles */
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .cart-item p {
+            margin: 0;
+        }
+
+        .remove-button {
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .remove-button:hover {
+            background-color: #d32f2f;
+        }
+        
+        .footer {
+            padding: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <h1>SHAMMY'S GALLERY</h1>
+        <div>
+            <h3 class="logo2">BY SHAMMY</h3>
+        </div>
+    </div>
+    <div class="tab-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Portfolio</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <section class="cart-section">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button onclick="clearCart()">Clear Cart</button>
+    </section>
+
+    <footer class="footer">
+        <div class="row">
+            <ul>
+                <li><a href="https://www.instagram.com/shammys.gallery" target="_blank">INSTAGRAM</a></li>
+                <li><a href="https://www.linkedin.com/in/shamiltonomwenga" target="_blank">LINKEDIN</a></li>
+                <li><a href="https://www.vogue.com/photovogue/photographers/313512" target="_blank">PORTFOLIO</a></li>
+            </ul>
+        </div>
+    
+        <div class="row">
+            Shammy's Gallery © 2024 - All rights reserved
+        </div>
+
+        <div class="logo3">
+            SHAMMY'S GALLERY
+            <div>
+                <h3 class="logo4">BY SHAMMY</h3>
+            </div> 
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            displayCartItems();
+        });
+
+        function displayCartItems() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+            cart.forEach((item, index) => {
+                let cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <p>${item.name} - $${item.price}</p>
+                    <button class="remove-button" onclick="removeFromCart(${index})">Remove</button>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+            });
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCartItems();
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            displayCartItems();
+        }
+    </script>
+</body>
+</html>

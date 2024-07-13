@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="shop.js"></script>
+    <script src="scripts.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Tilt+Neon&display=swap" rel="stylesheet">
@@ -212,7 +212,8 @@
             <h3 class="logo2">BY SHAMMY</h3>
         </div>
         <div>
-        <button class="cart-button">Cart</button>
+            <a href="cart.html" class="cart-button" onclick="viewCart()">Cart (<span id="cart-count">0</span>)</a>
+        </div>
         </div>
     </div>
     <div class="tab-bar">
@@ -240,6 +241,7 @@
             <div class="details">
                 <p class="medium">Medium: Charcoal</p>
                 <p class="size">Size: 27.5 inches by 37 inches</p>
+                <button class="add-to-cart" onclick="addToCart('MARLEY', 500)">Add to Cart - $500</button>
             </div>
         </div>
 
@@ -249,6 +251,7 @@
             <div class="details">
                 <p class="medium">Medium: Mixed Media</p>
                 <p class="size">Size: 841x 1189 mm</p>
+                <button class="add-to-cart" onclick="addToCart('JUXTAPOSED JEWELZ', 600)">Add to Cart - $600</button>
             </div>
         </div>
         
@@ -259,6 +262,7 @@
             <div class="details">
                 <p class="medium">Medium: Charcoal on Paper</p>
                 <p class="size">Size: 841mm x 1189mm</p>
+                <button class="add-to-cart" onclick="addToCart('MARADONA', 600)">Add to Cart - $600</button>
             </div>
         </div>
 
@@ -269,6 +273,7 @@
             <div class="details">
                 <p class="medium">Medium: Mixed Medis</p>
                 <p class="size">Size: 297 x 420mm</p>
+                <button class="add-to-cart" onclick="addToCart(' CHARCOAL1', 600)">Add to Cart - $600</button>
             </div>
         </div>
 
@@ -279,6 +284,7 @@
             <div class="details">
                 <p class="medium">Medium: Mixed Media</p>
                 <p class="size">Size: 297 x 420mm</p>
+                <button class="add-to-cart" onclick="addToCart(' CHARCOAL2', 600)">Add to Cart - $600</button>
             </div>
         </div>
 
@@ -289,6 +295,7 @@
             <div class="details">
                 <p class="medium">Medium: Charcoal hand drawing</p>
                 <p class="size">Size: 594 x 841 mm</p>
+                <button class="add-to-cart" onclick="addToCart(' ART2', 600)">Add to Cart - $600</button>
             </div>
         </div>
 
@@ -300,6 +307,7 @@
             <div class="details">
                 <p class="medium">Medium: Charcoal hand drawing</p>
                 <p class="size">Size: 594 x 841 mm</p>
+                <button class="add-to-cart" onclick="addToCart(' MOM2', 600)">Add to Cart - $600</button>
             </div>
         </div>
 
@@ -311,6 +319,7 @@
             <div class="details">
                 <p class="medium">Medium: Charcoal hand drawing</p>
                 <p class="size">Size: 594 x 841 mm</p>
+                <button class="add-to-cart" onclick="addToCart(' CAMO', 600)">Add to Cart - $600</button>
             </div>
         </div>
 
@@ -320,6 +329,7 @@
             <div class="details">
                 <p class="medium">Medium: Charcoal hand drawing</p>
                 <p class="size">Size: 594 x 841 mm</p>
+                <button class="add-to-cart" onclick="addToCart('LABOUR ', 600)">Add to Cart - $600</button>
             </div>
         </div>
 
@@ -329,6 +339,7 @@
             <div class="details">
                 <p class="medium">Medium: Oil on Canvas</p>
                 <p class="size">Size: 24x36 inches</p>
+                <button class="add-to-cart" onclick="addToCart('WAR', 600)">Add to Cart - $600</button>
             </div>
         </div>
 
@@ -357,16 +368,33 @@
     </footer>
 
     <script>
+       // Initialize cart
+       document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+
+        function addToCart(itemName, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: itemName, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-count').textContent = cart.length;
+        }
+
         function openModal(imageUrl) {
-        var modal = document.getElementById("myModal");
-        var modalImg = document.getElementById("modalImg");
-        modal.style.display = "block";
-        modalImg.src = imageUrl;
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modalImg");
+            modal.style.display = "block";
+            modalImg.src = imageUrl;
         }
 
         function closeModal() {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none";
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
         }
     </script>
 </body>
