@@ -13,6 +13,44 @@
     <style>
         /* SHOP */
 
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.logo2 {
+    margin: 0;
+    padding: 0;
+}
+
+.cart-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cart-button:hover {
+    background-color: #555;
+}
+
+
+.cart-button:hover {
+    background-color: #555;
+}
 .modal {
     display: none;
     position: fixed;
@@ -172,6 +210,9 @@
         <h1>SHAMMY'S GALLERY</h1>
         <div>
             <h3 class="logo2">BY SHAMMY</h3>
+        </div>
+        <div>
+        <button class="cart-button">Cart</button>
         </div>
     </div>
     <div class="tab-bar">

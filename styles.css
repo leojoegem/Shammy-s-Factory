@@ -135,6 +135,7 @@ h2, h3 {
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "copperplate", sans-serif;
 }
 
 /* Styling for the artist information */
@@ -165,19 +166,20 @@ h2, h3 {
 
 /* Styling for the artist photos */
 .artist-photo {
-  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  width: 100%; /* Full width of the container */
 }
 
 .artist-photo img {
-  width: 80%;
-  max-width: 300px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 48%; /* Slightly less than 50% to add some space between images */
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for styling */
 }
+
 
 /* Adjust the margin between the images */
 .artist-photo img:last-child {
