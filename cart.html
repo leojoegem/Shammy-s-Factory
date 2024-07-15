@@ -6,34 +6,167 @@
     <link rel="stylesheet" href="styles.css">
     <title>Cart</title>
     <style>
-        /* Your existing CSS styles */
+       body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
 
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-        }
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+}
 
-        .cart-item p {
-            margin: 0;
-        }
+.cart-section {
+    flex: 1;
+    margin-top: 20px;
+}
 
-        .remove-button {
-            background-color: #f44336;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
 
-        .remove-button:hover {
-            background-color: #d32f2f;
-        }
-        
-        .footer {
-            padding: 1em 0;
-        }
+.cart-header h2 {
+    margin: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.remove-symbol {
+    font-size: 20px;
+    cursor: pointer;
+    color: #f44336;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.remove-symbol:hover {
+    color: #d32f2f;
+}
+
+.clear-button,
+.inquiry-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.clear-button {
+    background-color: #f44336;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.clear-button:hover {
+    background-color: #d32f2f;
+}
+
+.inquiry-button {
+    width: auto; /* Adjust width as needed */
+    max-width: 200px; /* Optional: Set a max width if needed */
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px auto; /* Center button and add top/bottom margins */
+}
+
+
+.inquiry-button:hover {
+    background-color: #45a049;
+}
+
+.footer {
+    padding: 1em 0;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Media queries for mobile */
+@media (max-width: 720px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .remove-symbol {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .clear-button {
+        width: 20%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Media queries for larger screens */
+@media (min-width: 721px) {
+    .cart-item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .clear-button {
+        align-self: flex-end;
+        margin-bottom: 20px;
+    }
+
+    .cart-header {
+        padding-bottom: 20px;
+    }
+
+    .remove-symbol {
+        font-size: 24px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -53,11 +186,16 @@
         </ul>
     </div>
 
-    <section class="cart-section">
-        <h2>Your Cart</h2>
-        <div id="cart-items"></div>
-        <button onclick="clearCart()">Clear Cart</button>
-    </section>
+    <div class="content">
+        <section class="cart-section">
+            <div class="cart-header">
+                <h2>My Cart</h2>
+                <button class="clear-button" onclick="clearCart()">Clear Cart</button>
+            </div>
+            <div id="cart-items"></div>
+            <button class="inquiry-button" onclick="makeInquiry()">Make Inquiry</button>
+        </section>
+    </div>
 
     <footer class="footer">
         <div class="row">
@@ -94,7 +232,7 @@
                 cartItem.className = 'cart-item';
                 cartItem.innerHTML = `
                     <p>${item.name} - $${item.price}</p>
-                    <button class="remove-button" onclick="removeFromCart(${index})">Remove</button>
+                    <button class="remove-symbol" onclick="removeFromCart(${index})" aria-label="Remove ${item.name} from cart">-</button>
                 `;
                 cartItemsContainer.appendChild(cartItem);
             });
@@ -110,6 +248,11 @@
         function clearCart() {
             localStorage.removeItem('cart');
             displayCartItems();
+        }
+
+        function makeInquiry() {
+            // Add your inquiry logic here
+            alert('Inquiry button clicked');
         }
     </script>
 </body>
