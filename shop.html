@@ -12,8 +12,6 @@
 
     <style>
         /* SHOP */
-
-
 .logo {
     display: flex;
     justify-content: space-between;
@@ -28,7 +26,7 @@
 
 .logo2 {
     margin: 0;
-    padding: 0;
+    padding: 1%;
 }
 
 .cart-button {
@@ -52,6 +50,18 @@
     background-color: #555;
 }
 
+.details {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
 .add-to-cart {
     outline: none;
     text-decoration: none;
@@ -67,11 +77,12 @@
     background-color: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.6);
     transition: all 0.3s ease-in-out;
-    margin-top: auto; /* ensures the button stays at the bottom */
+    margin: 10px auto; /* Add spacing */
 }
 
+
 .add-to-cart .button-text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "coppperplate", sans-serif;
     color: #000000;
     font-size: 12px;
     font-weight: 500;
@@ -97,23 +108,6 @@
     }
 }
 
-@keyframes add-to-cart {
-    0% {
-        transform: translate3d(0, 0, 0) translateZ(0);
-    }
-    25% {
-        transform: translate3d(4px, 0, 0) translateZ(0);
-    }
-    50% {
-        transform: translate3d(-3px, 0, 0) translateZ(0);
-    }
-    75% {
-        transform: translate3d(2px, 0, 0) translateZ(0);
-    }
-    100% {
-        transform: translate3d(0, 0, 0) translateZ(0);
-    }
-}
 .modal {
     display: none;
     position: fixed;
@@ -154,12 +148,13 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 2rem; /* Adjust as needed */
+    max-width: fit-content;
 }
 
 .shop-item {
     font-family: monospace, sans-serif;
     margin: 1rem;
-    border: 3px solid #776e62;
+    border: 3px solid white;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -245,7 +240,7 @@
     padding-bottom: 20px; /* Add bottom padding to create space */
 }
 
-.logo {
+.secondarylogo {
     text-align: center;
     display: block;
     font-size: 13px;
@@ -272,15 +267,10 @@
     </style>
 </head>
 <body>
-    <div class="logo">
-        <h1>SHAMMY'S GALLERY</h1>
-        <div>
-            <h3 class="logo2">BY SHAMMY</h3>
-        </div>
-        <div>
-            <a href="cart.html" class="cart-button" onclick="viewCart()">Cart (<span id="cart-count">0</span>)</a>
-        </div>
-        </div>
+    <div class="secondarylogo">
+        <img src="logos/logo3.jpg" alt="Shammy's Gallery Logo" class="logo-image">
+        <button class="cart-button" onclick="toggleCartButton()">Cart <span id="cart-count">0</span></button>
+        
     </div>
     <div class="tab-bar">
         <ul>
@@ -309,7 +299,18 @@
                 <p class="size">Size: 27.5 inches by 37 inches</p>
                 <button class="add-to-cart" id="add-to-cart-MARLEY" data-price="500" onclick="addToCart('MARLEY', 500)">Add to Cart - $500</button>
             </div>
+        </div>        
+
+        <div class="shop-item">
+            <img src="Images/photography/ART2.jpeg" alt="Piece 5">
+            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')" style="display: block; margin: 0 auto;">ATTITUDE OF JUSTICE 1/4..."</button>
+            <div class="details">
+                <p class="medium">Medium: Charcoal hand drawing</p>
+                <p class="size">Size: 594 x 841 mm</p>
+                <button class="add-to-cart" id="add-to-cart-ART2" data-price="500" onclick="addToCart(' ART2', 600)">Add to Cart - $600</button>
+            </div>
         </div>
+
 
         <div class="shop-item">
             <img src="Images/JUXTAPOSED_JEWELZ/JUXTAPOSED_JEWELZ.jpg" alt="Piece 2">
@@ -318,17 +319,6 @@
                 <p class="medium">Medium: Mixed Media</p>
                 <p class="size">Size: 841x 1189 mm</p>
                 <button class="add-to-cart" id="add-to-cart-JUXTAPOSED_JEWELS" data-price="500" onclick="addToCart('JUXTAPOSED JEWELZ', 600)">Add to Cart - $600</button>
-            </div>
-        </div>
-        
-
-        <div class="shop-item">
-            <img src="Images/MARADONA/MARADONA.jpg" alt="Piece 3">
-            <button class="more-info" onclick="showDetails('DIEGO')" style="display: block; margin: 0 auto;">DIEGO..." '</button>
-            <div class="details">
-                <p class="medium">Medium: Charcoal on Paper</p>
-                <p class="size">Size: 841mm x 1189mm</p>
-                <button class="add-to-cart" id="add-to-cart-MARADONA" data-price="500" onclick="addToCart('MARADONA', 600)">Add to Cart - $600</button>
             </div>
         </div>
 
@@ -343,6 +333,16 @@
             </div>
         </div>
 
+        <div class="shop-item">
+            <img src="Images/MARADONA/MARADONA.jpg" alt="Piece 3">
+            <button class="more-info" onclick="showDetails('DIEGO')" style="display: block; margin: 0 auto;">DIEGO..." '</button>
+            <div class="details">
+                <p class="medium">Medium: Charcoal on Paper</p>
+                <p class="size">Size: 841mm x 1189mm</p>
+                <button class="add-to-cart" id="add-to-cart-MARADONA" data-price="500" onclick="addToCart('MARADONA', 600)">Add to Cart - $600</button>
+            </div>
+        </div>
+
 
         <div class="shop-item">
             <img src="Images/photography/CHARCOAL2.jpeg" alt="Piece 6">
@@ -353,31 +353,6 @@
                 <button class="add-to-cart" id="add-to-cart-CHAROAL2" data-price="500" onclick="addToCart(' CHARCOAL2', 600)">Add to Cart - $600</button>
             </div>
         </div>
-
-
-        <div class="shop-item">
-            <img src="Images/photography/ART2.jpeg" alt="Piece 5">
-            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')" style="display: block; margin: 0 auto;">ATTITUDE OF JUSTICE 1/4..."</button>
-            <div class="details">
-                <p class="medium">Medium: Charcoal hand drawing</p>
-                <p class="size">Size: 594 x 841 mm</p>
-                <button class="add-to-cart" id="add-to-cart-ART2" data-price="500" onclick="addToCart(' ART2', 600)">Add to Cart - $600</button>
-            </div>
-        </div>
-
-
-
-        <div class="shop-item">
-            <img src="Images/photography/MOM2.jpeg" alt="Piece 7">
-            <button class="more-info" onclick="showDetails('ATTITUDE_OF_JUSTICE')" style="display: block; margin: 0 auto;">ATTITUDE OF JUSTICE 2/4..." '</button>
-            <div class="details">
-                <p class="medium">Medium: Charcoal hand drawing</p>
-                <p class="size">Size: 594 x 841 mm</p>
-                <button class="add-to-cart" id="add-to-cart-MOM2" data-price="500" onclick="addToCart(' MOM2', 600)">Add to Cart - $600</button>
-            </div>
-        </div>
-
-
 
         <div class="shop-item">
             <img src="Images/ATTITUDE_OF_JUSTICE/CAMO.jpeg" alt="Piece 8">
@@ -409,7 +384,99 @@
             </div>
         </div>
 
-        <!-- Repeat the above structure for additional pieces -->
+        <!-- T-shirt section -->
+        <div class="shop-item">
+            <img src="clothing/shirt1.jpg" alt="shirt1">
+            <button class="more-info" onclick="showDetails('WAR')" style="display: block; margin: 0 auto;">WAR</button>
+            <div class="details">
+                <p class="medium">SIZES: XL, small</p>
+                <button class="add-to-cart" id="add-to-cart-ART5" data-price="700" onclick="addToCart('WAR', 600)">Add to Cart - $30</button>
+            </div>
+        </div>
+
+        <div class="shop-item">
+            <img src="clothing/shirt2.jpg" alt="Piece 9">
+            <button class="more-info" onclick="showDetails('WAR')" style="display: block; margin: 0 auto;">WAR</button>
+            <div class="details">
+                <p class="medium">SIZES: XXL, XL </p>
+                <button class="add-to-cart" id="add-to-cart-ART5" data-price="700" onclick="addToCart('WAR', 600)">Add to Cart - $40</button>
+            </div>
+        </div>
+
+        <div class="shop-item">
+            <img src="clothing/shirt4.jpg" alt="Piece 9">
+            <button class="more-info" onclick="showDetails('WAR')" style="display: block; margin: 0 auto;">WAR</button>
+            <div class="details">
+                <p class="medium">SIZES: L</p>
+                <button class="add-to-cart" id="add-to-cart-ART5" data-price="700" onclick="addToCart('WAR', 600)">Add to Cart - $30</button>
+            </div>
+        </div>
+
+        <!-- sticker section -->
+
+        <div class="shop-item">
+            <img src="Stickers/bulldog.jpeg" alt="Piece 9">
+            <button class="more-info" onclick="showDetails('WAR')" style="display: block; margin: 0 auto;">WAR</button>
+            <div class="details">
+                <p class="medium">Medium: Oil on Canvas</p>
+                <p class="size">Size: 24x36 inches</p>
+                <button class="add-to-cart" id="add-to-cart-ART5" data-price="700" onclick="addToCart('WAR', 600)">Add to Cart - $5</button>
+            </div>
+        </div>
+
+        <div class="shop-item">
+            <img src="Stickers/marleysticker.jpg" alt="Piece 9">
+            <button class="more-info" onclick="showDetails('WAR')" style="display: block; margin: 0 auto;">WAR</button>
+            <div class="details">
+                <p class="medium">Medium: Oil on Canvas</p>
+                <p class="size">Size: 24x36 inches</p>
+                <button class="add-to-cart" id="add-to-cart-ART5" data-price="700" onclick="addToCart('WAR', 600)">Add to Cart - $5</button>
+            </div>
+        </div>
+
+        <div class="shop-item">
+            <img src="Stickers/screst.jpeg" alt="Piece 9">
+            <button class="more-info" onclick="showDetails('WAR')" style="display: block; margin: 0 auto;">WAR</button>
+            <div class="details">
+                <p class="medium">Medium: Oil on Canvas</p>
+                <p class="size">Size: 24x36 inches</p>
+                <button class="add-to-cart" id="add-to-cart-ART5" data-price="700" onclick="addToCart('WAR', 600)">Add to Cart - $5</button>
+            </div>
+        </div>
+
+
+        <div class="shop-item">
+            <img src="Stickers/sticker4.jpg" alt="Piece 9">
+            <button class="more-info" onclick="showDetails('WAR')" style="display: block; margin: 0 auto;">WAR</button>
+            <div class="details">
+                <p class="medium">Medium: Oil on Canvas</p>
+                <p class="size">Size: 24x36 inches</p>
+                <button class="add-to-cart" id="add-to-cart-ART5" data-price="700" onclick="addToCart('WAR', 600)">Add to Cart - $5</button>
+            </div>
+        </div>
+
+        <div class="shop-item">
+            <img src="Stickers/sticker3.jpg" alt="Piece 9">
+            <button class="more-info" onclick="showDetails('WAR')" style="display: block; margin: 0 auto;">WAR</button>
+            <div class="details">
+                <p class="medium">Medium: Oil on Canvas</p>
+                <p class="size">Size: 24x36 inches</p>
+                <button class="add-to-cart" id="add-to-cart-ART5" data-price="700" onclick="addToCart('WAR', 600)">Add to Cart - $5</button>
+            </div>
+        </div>
+
+        <div class="shop-item">
+            <img src="Stickers/sticker7.jpg" alt="Piece 9">
+            <button class="more-info" onclick="showDetails('WAR')" style="display: block; margin: 0 auto;">WAR</button>
+            <div class="details">
+                <p class="medium">Medium: Oil on Canvas</p>
+                <p class="size">Size: 24x36 inches</p>
+                <button class="add-to-cart" id="add-to-cart-ART5" data-price="700" onclick="addToCart('WAR', 600)">Add to Cart - $5</button>
+            </div>
+        </div>
+        
+
+        
     </section>
 
     <footer class="footer">
