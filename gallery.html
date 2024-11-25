@@ -9,8 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Tilt+Neon&display=swap" rel="stylesheet">
     <title>Gallery</title>
     <style>
-
-
         .container {
             background-color: white;
             height: 100%;
@@ -18,29 +16,49 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-        
-        .image-collection {
-            margin-bottom: 30px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap; /* No wrapping to ensure horizontal scrolling */
-            overflow-x: auto; /* Enable horizontal scrolling */
-            gap: 20px; /* Adjust gap between items */
-            padding: 20px; /* Add padding for better spacing */
-            box-sizing: border-box;
-        }
-        .image-container-item {
-            width: 300px;
-            height: 300px;
-            background-size: contain;
-            background-position: center;
-            position: relative;
-            overflow: visible;
-            margin-right: 20px;
-            border: 20px solid #fff; /* Add a white border with 10px thickness */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
-        }
+    
+        /* Image Collection Section */
+/* Default styling for PC (unchanged) */
+.image-collection {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+}
 
+.image-container-item {
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+    background-position: center;
+    position: center;
+    overflow: visible;
+    margin-right: 15px;
+    border: 10px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjustments for mobile */
+@media (max-width: 720px) {
+    .image-collection {
+        gap: 10px; /* Reduce gaps */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .image-container-item {
+        width: 200px; /* Reduce width for mobile */
+        height: 100px; /* Reduce height for mobile */
+        margin-right: 10px; /* Narrower spacing */
+        border: 5px solid #fff; /* Smaller border size for compact design */
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for a cleaner look */
+    }
+}
+
+    
         .image-container-item:hover::after {
             content: attr(title);
             position: absolute;
@@ -49,54 +67,86 @@
             transform: translateX(-50%);
             background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
-            padding: 5px 10px;
+            padding: 5px 8px;
             border-radius: 5px;
-            font-size: 12px;
+            font-size: 10px; /* Smaller tooltip font for mobile */
             white-space: nowrap;
             pointer-events: none;
-            z-index: 999; /* Ensure the tooltip appears on top of other elements */
+            z-index: 999;
         }
-
+    
         .image-container-item img {
             width: 100%;
             height: 100%;
-            object-fit: scale-down; /* Maintain aspect ratio */
+            object-fit: contain; /* Maintain image aspect ratio */
         }
+    
+        /* Footer Section */
         .footer {
             background-color: black;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 15px; /* Adjust padding for compact screens */
             width: 100%;
             font-family: "Protest Revolution", sans-serif;
+            font-size: 14px; /* Improve readability on small screens */
         }
+    
         .secondarylogo {
             text-align: center;
             display: block;
-            font-size: 13px;
+            font-size: 12px; /* Adjust font size for readability */
         }
+    
         .logo2 {
             font-family: "copperplate", sans-serif;
             color: black;
+            font-size: 18.5px;
         }
-        .logo3 {
+    
+        .logo3, .logo4 {
             font-family: "copperplate", sans-serif;
             color: white;
         }
+    
         .logo4 {
-            font-family: "copperplate", sans-serif;
-            color: white;
-            font-size: 12px;
+            font-size: 10px;
         }
+    
         .row {
             font-family: "copperplate", sans-serif;
         }
-
+    
+        /* Responsive Adjustments for Small Screens */
+        @media (max-width: 720px) {
+            .image-collection {
+                gap: 10px; /* Narrower gaps for better fit */
+                padding: 10px; /* Compact padding */
+            }
+    
+            .image-container-item {
+                width: 200px; /* Scale down images for smaller screens */
+                height: 200px;
+            }
+    
+            .image-container-item:hover::after {
+                font-size: 9px; /* Smaller tooltip font for compact space */
+            }
+    
+            .footer {
+                font-size: 12px; /* Adjust font size */
+                padding: 10px; /* Compact padding */
+            }
+        }
     </style>
+    
 </head>
 <body>
-    <div class="secondarylogo">
-        <img src="logos/logo3.jpg" alt="Shammy's Gallery Logo" class="logo-image">
+    <div class="logo">
+        <h1>SHAMMY'S GALLERY</h1> 
+        <div>
+            <h3 class="logo2">BY SHAMMY</h3>
+        </div>
     </div>
     <div class="tab-bar">
         <ul>

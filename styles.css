@@ -9,31 +9,69 @@ html, body {
   font-family: Arial, sans-serif;
   background-color: white;
   color: black;
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Photo Grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.photo:hover img {
+  transform: scale(1.1);
 }
 
 /* Headings */
-
-h1, h2 {
-  font-family: 'copperplate', sans-serif;
+h1, h3 {
+  font-family: 'Copperplate', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: black;
+  margin: 0; /* Removes all margin */
+  padding: 0; /* Removes all padding */
 }
 
-h3 {
-  font-family: "Protest Revolution", sans-serif; /* Consistent font for all headings */
-}
-
-/* Logo */
 .logo {
-  text-align: center; /* Center the logo horizontally */
-  margin: 10px 0; /* Add some spacing around the logo */
+  text-align: center;
 }
+
+.logo2 {
+  margin: 0; /* Removes all margin */
+  padding: 0; /* Removes all padding */
+}
+
+/* Add spacing explicitly between h1 and h3 */
+.logo h1 {
+  margin-bottom: 2px; /* Adds consistent spacing below h1 */
+}
+
+.logo h3 {
+  margin-top: 0; /* Ensures no extra spacing above h3 */
+}
+
 
 .logo-image {
-  max-width: 500px; /* Adjust width as needed */
-  height: 300; /* Maintain aspect ratio */
-  display: inline-block; /* Ensure proper alignment */
+  max-width: 100%; /* Adjust width dynamically */
+  height: auto; /* Maintain aspect ratio */
+  display: inline-block;
 }
 
 /* Main Navigation */
@@ -43,21 +81,24 @@ h3 {
 }
 
 .tab-bar ul {
-  list-style-type: none;
+  list-style: none;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   font-family: "copperplate", sans-serif;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .tab-bar li {
-  display: inline;
+  margin: 5px 0;
 }
 
 .tab-bar a {
   display: block;
-  padding: 10px 20px;
+  padding: 10px 15px;
   text-decoration: none;
   color: white;
+  transition: background-color 0.3s;
 }
 
 .tab-bar a:hover {
@@ -67,75 +108,45 @@ h3 {
 /* Footer */
 .footer {
   background: #000;
-  padding: 30px 0;
+  padding: 20px;
   text-align: center;
   font-family: 'Play', sans-serif;
+  color: gray;
 }
 
 .footer .row {
-  width: 100%;
-  margin: 1% 0;
-  padding: 0.6% 0;
-  color: gray;
+  margin: 10px 0;
   font-size: 0.8em;
 }
 
-.footer .row a {
+.footer a {
   text-decoration: none;
   color: gray;
-  transition: 0.5s;
+  transition: color 0.3s;
 }
 
-.footer .row a:hover {
+.footer a:hover {
   color: #fff;
 }
 
-.footer .row ul {
-  width: 100%;
+.footer ul {
+  list-style: none;
+  padding: 0;
 }
 
-.footer .row ul li {
-  display: inline-block;
-  margin: 0 30px;
+.footer ul li {
+  display: inline;
+  margin: 0 15px;
 }
 
-.footer .row a i {
-  font-size: 2em;
-  margin: 0 1%;
-}
-
-@media (max-width: 720px) {
-  .footer {
-    text-align: left;
-    padding: 5%;
-  }
-
-  .footer .row ul li {
-    display: block;
-    margin: 10px 0;
-    text-align: left;
-  }
-
-  .footer .row a i {
-    margin: 0 3%;
-  }
-
-  .tab-bar ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tab-bar li {
-    margin: 10px 0;
-  }
+.footer a i {
+  font-size: 1.5em;
+  margin: 0 5px;
 }
 
 /* Artist Introduction Section */
 .artist-introduction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  padding: 15px;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -143,56 +154,108 @@ h3 {
 }
 
 .artist-info {
-  width: 100%;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .artist-info h2, .artist-info h3 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #333;
-  font-family: "copperplate", sans-serif;
 }
 
 .artist-info p {
   color: black;
-  font-size: 18px;
+  font-size: 16px;
   padding: 0 10px;
+  margin-bottom: 10px;
 }
 
 .artist-photo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .artist-photo img {
   width: 100%;
-  height: 100vh; /* Full screen */
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover;
-  filter: brightness(60%);
+  filter: brightness(70%);
+  border-radius: 5px;
 }
 
+/* Adjustments for Small Screens */
+@media (max-width: 720px) {
+  body {
+    font-size: 14px; /* Slightly smaller font for compact screens */
+  }
 
-.artist-photo img:last-child {
-  margin-top: -15px;
+  .tab-bar ul {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .tab-bar li {
+    margin: 5px 0;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .footer ul li {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .footer a i {
+    font-size: 1.2em;
+  }
+
+  .artist-introduction {
+    padding: 10px;
+  }
+
+  .artist-info p {
+    font-size: 14px;
+  }
+
+  .artist-photo img {
+    height: auto;
+    border-radius: 5px;
+  }
 }
 
-.logo {
-  text-align: center;
-  display: block;
-  font-size: 13px;
-}
+@media (max-width: 768px) {
+  .photo-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+      gap: 15px; /* Smaller gap for compact layout */
+      padding: 20px;
+  }
 
-.logo2, .logo3, .logo4 {
-  font-family: "copperplate", sans-serif;
-}
+  .tab-bar ul {
+      flex-wrap: wrap; /* Allow wrapping for the navigation bar */
+      justify-content: space-evenly;
+  }
 
-.logo3, .logo4 {
-  color: white;
-}
+  .tab-bar ul li {
+      margin: 10px 5px; /* Reduce spacing */
+  }
 
-.row {
-  font-family: "copperplate", sans-serif;
+  .tab-bar ul li a {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .logo {
+      font-size: 1.5rem; /* Slightly smaller logo for mobile */
+  }
+
+  .logo2 {
+      font-size: 1rem;
+  }
+
+  footer .row ul li {
+      margin: 0 10px;
+  }
 }

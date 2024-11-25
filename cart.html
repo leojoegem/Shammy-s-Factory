@@ -6,21 +6,18 @@
     <link rel="stylesheet" href="styles.css">
     <title>Cart</title>
     <style>
-.body, html {
-    height: 100%;
+html, body {
+    height: 100%; /* Ensure the page height is the full viewport height */
     margin: 0;
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
 }
 
 .content {
-    flex: 1;
+    flex: 1; /* This makes the content area grow to fill the available space */
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 100%;
-    margin: auto;
 }
 
 .cart-section {
@@ -49,6 +46,7 @@
     border: 1px solid #ccc; /* Add this line */
     border-radius: 5px; /* Optional: to round the corners */
     margin-bottom: 10px;
+    font-family: "copperplate", sans-serif;
 }
 
 
@@ -200,7 +198,7 @@
                 <button class="clear-button" onclick="clearCart()">Clear Cart</button>
             </div>
             <div id="cart-items"></div>
-            <button class="inquiry-button" onclick="makeInquiry()">Make Inquiry</button>
+            <button class="inquiry-button" onclick="makeInquiry()">Send Order</button>
         </section>
     </div>
 
@@ -238,7 +236,7 @@
                 let cartItem = document.createElement('div');
                 cartItem.className = 'cart-item';
                 cartItem.innerHTML = `
-                    <p>${item.name} - $${item.price}</p>
+                    <p>${item.name} - £${item.price}</p>
                     <button class="remove-symbol" onclick="removeFromCart(${index})" aria-label="Remove ${item.name} from cart">-</button>
                 `;
                 cartItemsContainer.appendChild(cartItem);
@@ -258,9 +256,25 @@
         }
 
         function makeInquiry() {
-            // Add your inquiry logic here
-            alert('Inquiry button clicked');
-        }
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart.length === 0) {
+                alert("Your cart is empty. Add items before sending an order.");
+                return;
+                }
+
+            // Format cart data into a readable string
+                let orderDetails = cart.map(item => `${item.name}: $${item.price}`).join('\n');
+
+            // Email recipient and subject
+                let recipient = "leojoegem@gmail.com"; // Replace with your email
+                let subject = "New Order from Shammy's Gallery";
+                let body = `Hello,\n\nI would like to place an order for the following items:\n\n${orderDetails}\n\nThank you!`;
+
+    // Open mail client with pre-filled details
+    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
     </script>
 </body>
 </html>
