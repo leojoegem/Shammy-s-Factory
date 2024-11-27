@@ -14,19 +14,20 @@ html, body {
 
 /* Photo Grid */
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
   padding: 40px;
-  max-width: 1500px;
+  max-width: 500px; /* Adjusted for vertical centering */
   margin: auto;
 }
 
 .photo {
+  width: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .photo img {
@@ -38,6 +39,7 @@ html, body {
 .photo:hover img {
   transform: scale(1.1);
 }
+
 
 /* Headings */
 h1, h3 {
