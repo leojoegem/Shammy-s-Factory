@@ -250,12 +250,29 @@ h1, h3 {
   }
 
   .logo {
-      font-size: 1.5rem; /* Slightly smaller logo for mobile */
-  }
+    font-size: 1.2rem; /* Smaller font size for mobile */
+}
 
-  .logo2 {
-      font-size: 1rem;
-  }
+.logo2 {
+    font-size: 0.8rem;
+}
+.logo img, .logo2 img {
+  max-width: 80%; /* Shrink images proportionally */
+  height: auto;   /* Maintain aspect ratio */
+}
+.photo-grid {
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  gap: 10px; /* Reduce the gap for compact layout */
+  padding: 10px; /* Adjust padding for mobile */
+}
+
+.photo-grid .photo img {
+  max-width: 75%; /* Scale down the images */
+  margin: 0 auto; /* Center images within their container */
+  align-items: center;
+  padding-left: 100px;
+}
+
 
   footer .row ul li {
       margin: 0 10px;

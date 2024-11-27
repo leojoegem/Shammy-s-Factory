@@ -133,6 +133,10 @@ html, body {
     margin-right: 10px;
 }
 
+h2 {
+    font-family: "copperplate", sans-serif;
+}
+
 /* Media queries for mobile */
 @media (max-width: 720px) {
     .cart-item {
@@ -264,10 +268,10 @@ html, body {
                 }
 
             // Format cart data into a readable string
-                let orderDetails = cart.map(item => `${item.name}: $${item.price}`).join('\n');
+                let orderDetails = cart.map(item => `${item.name}: £${item.price}`).join('\n');
 
             // Email recipient and subject
-                let recipient = "leojoegem@gmail.com"; // Replace with your email
+                let recipient = "artbyshammy9@gmail.com"; // Replace with your email
                 let subject = "New Order from Shammy's Gallery";
                 let body = `Hello,\n\nI would like to place an order for the following items:\n\n${orderDetails}\n\nThank you!`;
 
