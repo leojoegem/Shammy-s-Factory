@@ -62,7 +62,7 @@ h1, h3 {
 
 /* Add spacing explicitly between h1 and h3 */
 .logo h1 {
-  margin-bottom: 2px; /* Adds consistent spacing below h1 */
+  margin-bottom: -10px; /* Adds consistent spacing below h1 */
 }
 
 .logo h3 {

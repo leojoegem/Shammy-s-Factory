@@ -8,6 +8,93 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Tilt+Neon&display=swap" rel="stylesheet">
     <title>Home</title>  
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes up full viewport height */
+        }
+
+        .artist-container {
+            border: 3px solid black;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 20px;
+            position: relative;
+            background-color: white;
+            max-width: 900px; /* Increased max-width for larger screens */
+            margin: 40px auto;
+            box-sizing: border-box;
+            text-align: center;
+            font-family: "copperplate", sans-serif;
+        }
+
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            .artist-container {
+                max-width: 95%; /* Occupy most of the screen on smaller devices */
+                margin: 20px auto; /* Reduced margin for smaller screens */
+                padding: 15px; /* Slightly smaller padding */
+            }
+        }
+
+        .image-wrapper {
+            position: absolute;
+            bottom: -90px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+        }
+
+        .image-wrapper img {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gallery-name {
+            text-align: center;
+            margin-top: 60px;
+            font-family: "copperplate", sans-serif;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px; /* Adjust padding for compact screens */
+            width: 100%;
+            font-family: "Protest Revolution", sans-serif;
+            font-size: 14px; /* Improve readability on small screens */
+            margin-top: auto; /* This is the key for sticky footer */
+        }
+    
+        .secondarylogo {
+            text-align: center;
+            display: block;
+            font-size: 12px; /* Adjust font size for readability */
+        }
+    
+        .logo2 {
+            font-family: "copperplate", sans-serif;
+            color: black;
+            font-size: 18.5px;
+        }
+    
+        .logo3, .logo4 {
+            font-family: "copperplate", sans-serif;
+            color: white;
+        }
+    
+        .logo4 {
+            font-size: 10px;
+        }
+    
+        .row {
+            font-family: "copperplate", sans-serif;
+        }
+    </style>
 </head>
 <body>
     <div class="logo">
@@ -27,18 +114,15 @@
         </ul>
     </div>
 
-    <!-- Gallery Section -->
-    <div class="photo-grid">
-        <div class="photo">
-            <a href="shop.html"><img src="update2/shoplogo.jpg" alt="Placeholder 1"></a>
-        </div>
-        <div class="photo">
-            <a href="contact.html"><img src="update2/emaillogo.jpg" alt="Placeholder 2"></a>
-        </div>
-        <div class="photo">
-            <a href="https://www.instagram.com/shammys.gallery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="update2/iglogo.jpg" alt="Contact Me"></a>
+    <div class="artist-container">
+        <h2>ARTIST</h2>
+        <p>SHAMMY IS A KENYAN-BORN ARTIST FOCUSING ON FINE ART, PHOTOGRAPHY, FILM AND ARCHITECTURE. SHAMMY HAS USED HIS CHILDHOOD LOVE FOR DRAWING AND DIGITAL ART TO CREATE ARTISTIC EXPRESSIONS AND ARTWORK WHICH SERVE AS A SYMBOL OF DIVERSITY. SHAMMY'S WORK HAS FEATURED ACROSS DIFFERENT ART MAGAZINES AND EXHIBITIONS. SHAMMY'S GALLERY, BY SHAMMY, IS A CONTEMPORARY GALLERY FEATURING SHAMMY AND HIS WORKS.</p>
+        <div class="image-wrapper">
+            <img src="update2/image.png" alt="Description of Image 1">
         </div>
     </div>
+
+    <p class="gallery-name">SHAMMY'S GALLERY BY SHAMMY</p>
 
     <footer class="footer">
         <div class="row">
@@ -60,28 +144,14 @@
             </div> 
         </div>
     </footer>
-    
-
 
     <script>
         function transitionToPage(pageURL) {
             window.location.href = pageURL;
         }
     </script>
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
-
-        function slideTop() {
-            var secondImage = document.querySelector('.artist-photo img:nth-child(2)');
-            secondImage.style.marginTop = '-15px';
-        }
-
-        function slideBack() {
-            var secondImage = document.querySelector('.artist-photo img:nth-child(2)');
-            secondImage.style.marginTop = '0';
-        }
-      </script>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
